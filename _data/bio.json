@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Julia Robe",
+    "name": "Julia Robe, MSc",
     "label": "Quantitative Analyst",
     "picture": "https://github.com/juliarobe.png",
     "email": "jerobe@sas.upenn.edu",
     "phone": "",
     "website": "https://juliarobe.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
+    "summary": "Highly motivated data analyst with a strong background in quantitative research and proficiency in Python, SQL, data visualization tools, and machine learning fundamentals. I derive actionable insights from complex data sets and am passionate about optimizing processes and fostering a data-forward culture.",
     "location": { "address": "", "postalCode": "", "city": "Philadelphia", "countryCode": "USA", "region": "Pennsylvania" },
     "profiles": [
       { "network": "github", "username": "juliarobe", "url": "http://github.com/juliarobe" },
