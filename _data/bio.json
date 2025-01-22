@@ -23,20 +23,29 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "Python", "SQL" ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "name": "Toolsets",
+      "keywords": [ "Jupyter", "GitHub", "LaTEX", "Microsoft Suite", "Markdown" ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "institution": "University of New Orleans, New Orleans, LA",
+      "area": "Physics and Mathematics",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "startDate": "2016-08-01",
+      "endDate": "2020-12-15",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "University of Pennsylvania, Philadelphia, PA",
+      "area": "Physics",
+      "studyType": "Masters",
+      "startDate": "2021-08-01",
+      "endDate": "2023-12-15",
       "courses": [
       ]
     }
