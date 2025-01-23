@@ -4,7 +4,7 @@ type: project
 image: img/sampleA_color_images.PNG
 title: "Galaxy Morphology and Evolution"
 date: 2023
-published: true
+published: false
 labels:
   - Early-Type Galaxies
   - Late-Type Galaxies
