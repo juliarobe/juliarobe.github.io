@@ -39,14 +39,22 @@ Next, I computed K-corrections, which account for the effects of redshift on gal
 </style>
 
 <div class="image-grid">
-  <img class="img-fluid" src="../img/Kcorr_fracdev_1_gband.PNG" alt="G-Band De Vaucouleurs Dominated">
-  <figcaption>De Vaucouleurs Dominated (fracdev = 1) G-Band</figcaption>
-  <img class="img-fluid" src="../img/Kcorr_fracdev_1_rband.PNG" alt="R-Band De Vaucouleurs Dominated">
-  <figcaption>De Vaucouleurs Dominated (fracdev = 1) R-Band</figcaption>
-  <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_gband.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
-  <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) G-Band</figcaption>
-  <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_rband.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
-<figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) R-Band</figcaption>
+  <div>
+    <img class="img-fluid" src="../img/Kcorr_fracdev_1_gband.PNG" alt="G-Band De Vaucouleurs Dominated">
+    <figcaption>De Vaucouleurs Dominated (fracdev = 1) G-Band</figcaption>
+  </div>
+  <div>
+    <img class="img-fluid" src="../img/Kcorr_fracdev_1_rband.PNG" alt="R-Band De Vaucouleurs Dominated">
+    <figcaption>De Vaucouleurs Dominated (fracdev = 1) R-Band</figcaption>
+  </div>
+  <div>
+    <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_gband.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) G-Band</figcaption>
+  </div>
+  <div>
+    <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_rband.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) R-Band</figcaption>
+  </div>
 </div>
 
 The above plots show K-corrections as a function of redshift for galaxies with different light profile characteristics (fracdev). The plots show the relationship between K-correction values (y-axis) and redshift (x-axis) for galaxies with fracdev = 1 and fracdev < 1 in the g and r bands.
@@ -57,7 +65,7 @@ This trend is consistent with the visual differences observed in the galaxy imag
 
 Finally, I derived K-correction functions (K(z)) and used them to calculate absolute magnitudes, sizes, and surface brightness for Samples A and B in the g- and r-bands, creating comparative distribution plots.
 
-<div class="row">
+<div class="row px-0">
   <div class="col-md-6">
     <img src="../img/abs_mag_sampleA.PNG" alt="Sample A Absolute Magnitude Distribution">
   </div>
@@ -66,7 +74,7 @@ Finally, I derived K-correction functions (K(z)) and used them to calculate abso
   </div>
 </div>
 
-<div class="row">
+<div class="row px-0">
   <div class="col-md-6">
     <img src="../img/size_dist_sampleA.PNG" alt="Sample A Physical Size Distribution">
   </div>
@@ -75,7 +83,7 @@ Finally, I derived K-correction functions (K(z)) and used them to calculate abso
   </div>
 </div>
 
-<div class="row">
+<div class="row px-0">
   <div class="col-md-6">
     <img src="../img/surface_brightness_sampA.PNG" alt="Sample A Surface Brightness Distribution">
   </div>
