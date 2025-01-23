@@ -33,7 +33,7 @@
   "education": [
     {
       "institution": "University of New Orleans, New Orleans, LA",
-      "area": "Physics and Mathematics",
+      "area": "Physics and Mathematics; Graduated Magna Cum Laude",
       "studyType": "B.S.",
       "startDate": "2016-08-01",
       "endDate": "2020-12-15",
@@ -53,91 +53,163 @@
   "work": [
     {
       "company": "University of Pennsylvania",
-      "position": "Graduate Student Researcher",
+      "position": "Graduate Researcher",
       "website": "",
       "startDate": "2023-06-15",
       "endDate": "2024-12-15",
       "summary": "Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
       "highlights": [
-        "•	Processed and analyzed complex spectroscopic data from 300+ galaxies, demonstrating ability to handle large datasets.",
-        "•	Wrote Python scripts to analyze, visualize, and interpret the data, extracting findings to inform scientific conclusions.",
-        "•	Utilized bootstrap resampling and cross-validation techniques to ensure model robustness and accuracy in predictions.",
-        "•	Applied regression analysis and modeling techniques to understand complex relationships in large datasets.",
-        "•	Employed data correction methods to ensure data quality and accuracy in large datasets.",
-        "•	Developed data visualizations with Matplotlib and Seaborn to communicate insights and trends.",
-        "•	Uncovered key trends and correlations in large astronomical datasets, informing conclusions on galaxy evolution."
+        "Processed and analyzed complex spectroscopic data from 300+ galaxies, demonstrating ability to handle large datasets.",
+        "Wrote Python scripts to analyze, visualize, and interpret the data, extracting findings to inform scientific conclusions.",
+        "Utilized bootstrap resampling and cross-validation techniques to ensure model robustness and accuracy in predictions.",
+        "Applied regression analysis and modeling techniques to understand complex relationships in large datasets.",
+        "Employed data correction methods to ensure data quality and accuracy in large datasets.",
+        "Developed data visualizations with Matplotlib and Seaborn to communicate insights and trends.",
+        "Uncovered key trends and correlations in large astronomical datasets, informing conclusions on galaxy evolution."
       ]
     },
     {
       "company": "University of Pennsylvania",
-      "position": "Graduate Student Researcher",
+      "position": "Graduate Researcher",
       "website": "https://web.sas.upenn.edu/devlinlab/",
       "startDate": "2021-07-05",
       "endDate": "2023-06-15",
       "summary": "Validated the Large Aperture Telescope Receiver for Simons Observatory and deployed the receiver to Chile.",
       "highlights": [
-        "•	Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
-        "•	Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
-        "•	Coordinated data analysis with multiple collaborators, including fellow graduate researchers, senior scientists, and stakeholders with non-technical backgrounds across three institutions, to validate findings and draw meaningful conclusions.",
-        "•	Developed and tested existing hardware solutions to improve research capabilities.",
-        "•	Obtained hands-on experience with sub-kelvin cryogenic, electrical, mechanical, and RF engineering.",
-        "•	Operated and maintained complex cryogenics and vacuum systems, ensuring seamless research operations.",
-        "•	Adapted to changing project requirements and tight deadlines, prioritizing tasks and managing time effectively to ensure timely deployment."
+        "Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
+        "Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
+        "Coordinated data analysis with multiple collaborators, including fellow graduate researchers, senior scientists, and stakeholders with non-technical backgrounds across three institutions, to validate findings and draw meaningful conclusions.",
+        "Developed and tested existing hardware solutions to improve research capabilities.",
+        "Obtained hands-on experience with sub-kelvin cryogenic, electrical, mechanical, and RF engineering.",
+        "Operated and maintained complex cryogenics and vacuum systems, ensuring seamless research operations.",
+        "Adapted to changing project requirements and tight deadlines, prioritizing tasks and managing time effectively to ensure timely deployment."
       ]
     },
     {
-      "company": "University of Pennsylvania",
-      "position": "Graduate Student Researcher",
-      "website": "https://web.sas.upenn.edu/devlinlab/",
-      "startDate": "2021-07-05",
-      "endDate": "2023-06-15",
-      "summary": "Validated the Large Aperture Telescope Receiver for Simons Observatory and deployed the receiver to Chile.",
+      "company": "University of New Orleans",
+      "position": "Undergraduate Researcher",
+      "website": "",
+      "startDate": "2019-01-05",
+      "endDate": "2020-12-15",
+      "summary": "Collaborated with Professors Juliette Ioup and Kendal Leftwich on a project to detect sperm whales in the Gulf of Mexico using Bayesian statistics and MATLAB.",
       "highlights": [
-        "•	Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
-        "•	Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
-        ""
-]
+        "Applied Bayesian statistics and signal processing techniques to analyze sperm whale click data, contributing to the development of a novel method for locating sperm whales.",
+        "Analyzed acoustic data from the Littoral Acoustic Demonstration Center to estimate the range of sperm whale clicks using a single hydrophone, advancing the understanding of marine life behavior.",
+        "Contributed to the advancement of marine conservation efforts by improving the detection and tracking of sperm whales in their natural habitat."
+      ]
+    },
+    {
+      "company": "University of New Orleans",
+      "position": "Teaching Assistant",
+      "website": "",
+      "startDate": "2019-01-05",
+      "endDate": "2020-12-15",
+      "summary": "Assisted Professor Leftwich in teaching and managing calculus-based Physics 1 and 2 courses.",
+      "highlights": [
+        "Enhanced student understanding of class material, providing individualized support and guidance to foster academic success.",
+        "Graded assignments and exams for the classes, ensuring accurate assessment of student knowledge and understanding."
+      ]
+    },
+    {
+      "company": "University of Michigan",
+      "position": "Undergraduate Research Intern",
+      "website": "",
+      "startDate": "2019-06-05",
+      "endDate": "2019-08-15",
+      "summary": "Participated in a Research Experience for Undergraduates (REU) summer research program at UM, working closely with Professor Jeffrey McMahon and his graduate students.",
+      "highlights": [
+        "Contributed to the development of the Simons Observatory (SO), a cutting-edge CMB experiment, by working on instrumentation design and optimization.",
+        "Designed a cryogenic reflectometer using AutoDesk Inventor, a computer-aided design program, to enable material characterization at cryogenic temperatures.",
+        "Optimized the reflectometer's size and configuration to meet optical requirements and cryostat footprint constraints.",
+        "Enhanced the McMahon lab's capabilities by developing a tool for testing and characterizing materials at extremely low temperatures (100mK to 4K)."
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
+      "organization": "American Physical Society",
+      "website": "https://www.aps.org/membership/communities/chapters",
+      "position": "Chair and Vice Chair",
+      "startDate": "2022-11-01",
+      "endDate": "2024-12-15",
+      "summary": "Oversaw chapter operations, led meetings, and coordinated events to support member engagement and professional development.",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
+        "Contributed to the growth and engagement of the new APS chapter through well-organized events and initiatives.",
+        "Coordinated two physics and astronomy town halls through collaborative partnerships with another student organization, promoting inter-departmental partnerships and community building, and engaging over 60 attendees.",
+        "Participated in APS Congressional Visit Day, engaging with senators and representatives from Pennsylvania to advocate for policies supporting research and science, including the Methane Emission Act, RESEARCHER Act, and Keep STEM Talent Act, and contributing to the collective voice of the scientific community."
       ]
     },
     {
-      "organization": "",
+      "organization": "NSF GRFP Mentoring",
       "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
+      "position": "Mentor",
+      "startDate": "2021-08-15",
+      "endDate": "2023-12-15",
+      "summary": "Provided intensive, individualized guidance and support to 9 students applying for the National Science Foundation Graduate Research Fellowship Program (NSF GRFP), including multiple one-on-one meetings, thorough review and editing of application materials, and strategic advice on application development.",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Served as a mentor to 9 students applying for the NSF GRFP over the past three years, with a 22% success rate (2 awardees), exceeding the national average success rate for GRFP applicants."
+      ]
+    },
+    {
+      "organization": "Penn Graduate Readiness and Application Development (GRAD) Program",
+      "website": "",
+      "position": "Mentor",
+      "startDate": "2021-08-15",
+      "endDate": "2022-05-30",
+      "summary": "Served as a mentor to undergraduate students, assisting them with their preparedness for graduate school and their graduate school applications.",
+      "highlights": [
+        "Offered expert insights and advice on graduate school preparedness, empowering students to feel more confident and prepared for their next steps.",
+        "Fostered a supportive community by being a trusted resource and sounding board for students' concerns, questions, and ideas.",
+        "Helped demystify the graduate school process, making it more accessible and understandable for 3 students."
+      ]
+    },
+    {
+      "organization": "Public Outreach in Physics at University of Pennsylvania (POP-UP)",
+      "website": "",
+      "position": "Volunteer",
+      "startDate": "2023-06-15",
+      "endDate": "2023-12-15",
+      "summary": "Assisted at events such as the physics department’s tricks-or-treats event and Franklin Institute Science After Hours."
+      "highlights": [
+        ""
+      ]
+    },
+    {
+      "organization": "The American Cancer Society (ACS)",
+      "website": "",
+      "position": "Volunteer",
+      "startDate": "2018-05-15",
+      "endDate": "2020-12-15",
+      "summary": "Assisted at several ACS events for their Making Strides Against Breast Cancer campaign. This included setting up for events, operating various stations at events, and staying late to clean up after events."
+      "highlights": [
+        ""
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "Graduate Research Fellowship",
+      "date": "2021-2024",
+      "awarder": "National Science Foundation",
+      "summary": "The Graduate Research Fellowship Program (GRFP) provides Fellowships to individuals selected early in their graduate careers based on their demonstrated potential for significant research achievements in science, technology, engineering or mathematics (STEM) or in STEM education."
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Bill J. Good Award",
+      "date": "2019",
+      "awarder": "University of New Orleans Foundation",
+      "summary": "This scholarship is awarded based on exceptional involvement in research activities with a faculty mentor."
+    },
+    {
+      "title": "Tolmas Scholar",
+      "date": "2018",
+      "awarder": "University of New Orleans",
+      "summary": "Awarded a student worker position with UNO Physics professor to conduct research for the Spring 2019-Fall 2019."
+    },
+    {
+      "title": "Privateer Undergraduate Research & Scholarly UNO Experience (PURSUE)",
+      "date": "2017",
+      "awarder": "University of New Orleans",
+      "summary": "Awarded a student worker position with a Genetics professor to conduct research in the Spring of 2018."
     }
   ],
   "references": [
