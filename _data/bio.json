@@ -27,7 +27,7 @@
     },
     {
       "name": "Toolsets",
-      "keywords": [ "Jupyter", "GitHub", "LaTEX", "Microsoft Suite", "Markdown" ]
+      "keywords": [ "Jupyter", "GitHub", "Tableau (proficiency in progress)", "LaTEX", "Microsoft Suite", "Markdown" ]
     }
   ],
   "education": [
@@ -52,28 +52,51 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "University of Pennsylvania",
+      "position": "Graduate Student Researcher",
       "website": "",
-      "startDate": "2015-08-01",
-      "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "startDate": "2023-06-15",
+      "endDate": "2024-12-15",
+      "summary": "Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "•	Processed and analyzed complex spectroscopic data from 300+ galaxies, demonstrating ability to handle large datasets.",
+        "•	Wrote Python scripts to analyze, visualize, and interpret the data, extracting findings to inform scientific conclusions.",
+        "•	Utilized bootstrap resampling and cross-validation techniques to ensure model robustness and accuracy in predictions.",
+        "•	Applied regression analysis and modeling techniques to understand complex relationships in large datasets.",
+        "•	Employed data correction methods to ensure data quality and accuracy in large datasets.",
+        "•	Developed data visualizations with Matplotlib and Seaborn to communicate insights and trends.",
+        "•	Uncovered key trends and correlations in large astronomical datasets, informing conclusions on galaxy evolution."
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
-      "summary": "",
+      "company": "University of Pennsylvania",
+      "position": "Graduate Student Researcher",
+      "website": "https://web.sas.upenn.edu/devlinlab/",
+      "startDate": "2021-07-05",
+      "endDate": "2023-06-15",
+      "summary": "Validated the Large Aperture Telescope Receiver for Simons Observatory and deployed the receiver to Chile.",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "•	Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
+        "•	Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
+        "•	Coordinated data analysis with multiple collaborators, including fellow graduate researchers, senior scientists, and stakeholders with non-technical backgrounds across three institutions, to validate findings and draw meaningful conclusions.",
+        "•	Developed and tested existing hardware solutions to improve research capabilities.",
+        "•	Obtained hands-on experience with sub-kelvin cryogenic, electrical, mechanical, and RF engineering.",
+        "•	Operated and maintained complex cryogenics and vacuum systems, ensuring seamless research operations.",
+        "•	Adapted to changing project requirements and tight deadlines, prioritizing tasks and managing time effectively to ensure timely deployment."
       ]
+    },
+    {
+      "company": "University of Pennsylvania",
+      "position": "Graduate Student Researcher",
+      "website": "https://web.sas.upenn.edu/devlinlab/",
+      "startDate": "2021-07-05",
+      "endDate": "2023-06-15",
+      "summary": "Validated the Large Aperture Telescope Receiver for Simons Observatory and deployed the receiver to Chile.",
+      "highlights": [
+        "•	Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
+        "•	Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
+        ""
+]
     }
   ],
   "volunteer": [
