@@ -4,7 +4,7 @@ type: project
 image: img/sampleA_color_images.PNG
 title: "Galaxy Morphology and Evolution"
 date: 2023
-published: false
+published: true
 labels:
   - Early-Type Galaxies
   - Late-Type Galaxies
@@ -66,29 +66,31 @@ This trend is consistent with the visual differences observed in the galaxy imag
 Finally, I derived K-correction functions (K(z)) and used them to calculate absolute magnitudes, sizes, and surface brightness for Samples A and B in the g- and r-bands, creating comparative distribution plots.
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-4">
     <img src="../img/abs_mag_sampleA.PNG" alt="Sample A Absolute Magnitude Distribution">
   </div>
-  <div class="col-md-5 offset-md-1">
+  <div class="col-md-4 offset-md-1">
     <img src="../img/abs_mag_sampleB.PNG" alt="Sample B Absolute Magnitude Distribution">
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-4">
     <img src="../img/size_dist_sampleA.PNG" alt="Sample A Physical Size Distribution">
   </div>
-  <div class="col-md-5 offset-md-1">
+  <div class="col-md-4 offset-md-1">
     <img src="../img/size_dist_sampleB.PNG" alt="Sample B Physical Size Distribution">
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-4">
     <img src="../img/surface_brightness_sampA.PNG" alt="Sample A Surface Brightness Distribution">
   </div>
-  <div class="col-md-5 offset-md-1">
+  <div class="col-md-4 offset-md-1">
     <img src="../img/surface_brightness_sampB.PNG" alt="Sample B Surface Brightness Distribution">
+  </div>
+</div>
   </div>
 </div>
 
