@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: /img/StellarForgeImages/ml_vs_L_alloneplot.png
+image: /img/StellarForgeImages/trueage_vs_bestage.png
 title: "Stellar Population Synthesis and Galaxy Evolution Modeling"
 date: 2023
 published: true
