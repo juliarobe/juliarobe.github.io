@@ -202,4 +202,7 @@ I also computed the residuals of the color-velocity dispersion by subtracting th
 <img class="img-fluid" src="../img/StellarForgeImages/resid_vs_age_magbins.png">
 
 
-We can see that for older galaxies, the residuals are larger and more positive than those for youngergalaxies, which tend to be negative.
+This investigation found a positive correlation between color and velocity dispersion. The residuals of the color-velocity dispersion relation showed a dependence on galaxy age, with older galaxies exhibiting larger and more positive residuals.
+
+
+This project demonstrated the power of stellar population synthesis models in understanding galaxy evolution and the complex relationships between galaxy properties. The findings of this project can be used to inform future studies of galaxy evolution and the formation of galaxies in the early universe.
