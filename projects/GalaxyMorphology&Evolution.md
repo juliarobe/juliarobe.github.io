@@ -14,7 +14,9 @@ summary: "Analyzed the properties of early-type and late-type galaxies using SDS
 The main goal of this project is to measure the luminosity, physical size, and surface brightness distribution of a sample of “early-type” (E, S0) and
 late-type (S) galaxies. For this project, we use the Sloan Digital Sky Survey (SDSS) “g” and “r” bands from Data Release 7.
 
-Before I begin analyzing galaxy data, I have to first retrieve it from the SDSS database. To do so, log into the SDSS database at https://casjobs.sdss.org/CasJobs/ and write the following two SQL queries:
+Before I begin analyzing galaxy data, I have to first retrieve it from the SDSS database. To do so, log into the SDSS database at https://casjobs.sdss.org/CasJobs/ and write the following two SQL queries.
+
+### SQL query to retrieve galaxy data from SDSS database:
 ```
 -- Query for Sample A (Early-type Galaxies)
 SELECT TOP 5000
@@ -60,11 +62,11 @@ Sample A's galaxies appear redder in color, while Sample B's appear more blue. S
 
 Next, I computed K-corrections, which account for the effects of redshift on galaxy brightness, by analyzing flux data from the SDSS database and applying filter responses and reddening corrections to galaxy spectra. This involved interpolating filter data to estimate responses at specific wavelengths, allowing me to visualize and understand the results.
 
-Here is a sample of my code used to calculate the observed magnitudes for both the r-band and g-band, which is are values needed to calculate the K-correction. This calculation is also where I interpolated the filter data to estimate the filter response at the exact wavelength of the spectral data:
+Below is a sample of my code used to calculate the observed magnitudes for both the r-band and g-band, which is are values needed to calculate the K-correction. This calculation is also where I interpolated the filter data to estimate the filter response at the exact wavelength of the spectral data.
 
+
+### Calculating the observed magnitudes for r-band and g-band:
 ```
-# Calculate observed magnitudes for r-band and g-band
-
 # Dictionaries to store observed magnitude values
 Mobs_r = {}
 Mobs_g = {}
@@ -94,8 +96,9 @@ for key, data in filtered_spec.items():
     Mobs_g[key] = g_mobs
 ```
 
-After doing a similar calculation for the magnitudes of the g-band and r-bands in the restframe, I'm finally ready to calculate the K-correction values:
+After doing a similar calculation for the magnitudes of the g-band and r-bands in the restframe, I'm finally ready to calculate the K-correction values.
 
+### Calculating K-correction values for the r-band and g-band:
 ```
 # Create dictionaries to store the differences in magnitudes
 K_r = {}
@@ -109,9 +112,9 @@ for key in Mobs_r:
         K_g[key] = abs(Mobs_g[key] - Mrest_g[key])
 ```
 
-Next, I compute the median K-correction in small redshift bins ($\Delta(z) = 0.02$), then I am finally ready to plot the K-correction versus the redshift values! Here is a sample of my code used to do just that:
+Next, I compute the median K-correction in small redshift bins ($$\Deltaz = 0.02$$), then I am finally ready to plot the K-correction versus the redshift values! Below is a sample of my code used to do just that.
 
-###Data Preparation:
+### Data Preparation:
 ```
 # Setting bin edges
 bin_edges = [0.0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.22, 0.24, 0.26, 0.28]
@@ -127,7 +130,7 @@ for key in fracdev_g:
             z_values.append(z)
             kr_values.append(K_r[cleaned_key])
 ```
-###Calculating median K-correction values:
+### Calculating median K-correction values:
 ```
 bin_centers = []
 Kcorr_r_med1 = []
@@ -145,7 +148,7 @@ for i in range(len(bin_edges) - 1):
         Kcorr_r_med1.append(med_r)
         K_med_r[(bin_start, bin_end)] = med_r
 ```
-###Plotting the results:
+### Plotting the results:
 ```
 # Plot the actual K_r values versus redshift
 plt.plot(z_values, kr_values, marker='o', linestyle='', color='blue', markersize=1, label='K')
@@ -163,7 +166,7 @@ plt.savefig("kcorr_r_fracdev1.png")
 plt.show()
 ```
 
-##K-correction values versus redshift plots:
+## K-correction values versus redshift plots:
 
 <style>
 .image-grid {
@@ -210,8 +213,40 @@ The plots reveal a clear trend of increasing K-correction values with redshift, 
 
 This trend is consistent with the visual differences observed in the galaxy images, where galaxies in Sample A (which have fracdev = 1) appeared redder, denser, and less structured, characteristic of early-type galaxies, whereas those in Sample B (which have fracdev < 1) appeared bluer, less dense, and more structured, typical of later-type galaxies.
 
-Finally, I derived K-correction functions (K(z)) and used them to calculate absolute magnitudes, sizes, and surface brightness for Samples A and B in the g- and r-bands, creating comparative distribution plots.
+Finally, I derived K-correction functions (K(z)) using linear interpolation and applied them to calculate absolute magnitudes, sizes, and surface brightness for Samples A and B in the g-band and r-band, creating comparative distribution plots.
 
+### K-Correction Interpolation Code Snippet
+To calculate K-corrections, I used linear interpolation to derive functions K(z) for Samples A and B.
+```
+k_r_1 = interpolate.interp1d(bin_centers, Kcorr_r_med1, bounds_error=False)
+```
+### Galaxy Property Calculations Code Snippet
+Using the K-correction functions, I calculated absolute magnitudes, sizes, and surface brightness for Samples A and B.
+```
+def luminosity_dist(z):
+    H_0 = 70 # km/s/Mpc
+    c = 3*10**5 # km/s
+    d_p = (c/H_0)*integrate.quad(e_int,0,z)[0] # Mpc
+    d_L = (1+z)*d_p
+    return d_L*10**6. # parsec
+
+def e_int(z):
+    omega_m = 0.3
+    omega_lambda = 0.7
+    e = ((1+z)**2*(1+omega_m*z) - omega_lambda*z*(2+z))**(-1./2.)
+    return e
+
+# Calculate absolute magnitudes
+sampleA_z["M_g"] =  sampleA_z["devmag_g"] - 5*np.log10(sampleA_z["d_L"]) + 5 -  sampleA_z["k_g"] - sampleA_z["extinction_g"]
+
+# Calculate sizes
+sampleA_z['size_g'] = sampleA_z['r_eff_g']*sampleA_z['d_L']
+
+# Calculate surface brightness
+sampleA_z["sb_g"] = sampleA_z["devmag_g"] - sampleA_z["k_g"] + 5*np.log10(sampleA_z["r_eff_g_arc"]) + 2.5*np.log10(2*np.pi) - 10*np.log10(1+sampleA_z["z"])
+```
+
+## Resulting Distribution Plots:
 
 <style>
 .image-grid {
