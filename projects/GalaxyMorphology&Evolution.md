@@ -11,8 +11,7 @@ labels:
   - SDSS
 summary: "Analyzed the properties of early-type and late-type galaxies using SDSS data, calculating K-corrections, absolute magnitudes, and characterizing galaxy distributions."
 ---
-The main goal of this project is to measure the luminosity, physical size, and surface brightness distribution of a sample of “early-type” (E, S0) and
-late-type (S) galaxies. For this project, we use the Sloan Digital Sky Survey (SDSS) “g” and “r” bands from Data Release 7.
+Galaxies, the fundamental building blocks of the universe, come in a diverse range of shapes, sizes, and colors. Understanding the properties and evolution of galaxies is crucial for unraveling the mysteries of the cosmos. This project focuses on measuring the luminosity, physical size, and surface brightness distribution of early-type (elliptical and lenticular) and late-type (spiral) galaxies using data from the Sloan Digital Sky Survey (SDSS). By analyzing the differences in these properties between galaxy types, we can gain insights into their formation and evolution, shedding light on the complex history of the universe. For this project, I use the SDSS “g” and “r” bands from Data Release 7.
 
 Before I begin analyzing galaxy data, I have to first retrieve it from the SDSS database. To do so, log into the SDSS database at https://casjobs.sdss.org/CasJobs/ and write the following two SQL queries.
 
@@ -112,7 +111,7 @@ for key in Mobs_r:
         K_g[key] = abs(Mobs_g[key] - Mrest_g[key])
 ```
 
-Next, I compute the median K-correction in small redshift bins ($$\Deltaz = 0.02$$), then I am finally ready to plot the K-correction versus the redshift values! Below is a sample of my code used to do just that.
+Next, I compute the median K-correction in small redshift bins ($$\Delta z = 0.02$$), then I am finally ready to plot the K-correction versus the redshift values! Below is a sample of my code used to do just that.
 
 ### Data Preparation:
 ```
