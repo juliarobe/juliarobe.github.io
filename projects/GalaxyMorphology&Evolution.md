@@ -14,6 +14,35 @@ summary: "Analyzed the properties of early-type and late-type galaxies using SDS
 The main goal of this project is to measure the luminosity, physical size, and surface brightness distribution of a sample of “early-type” (E, S0) and
 late-type (S) galaxies. For this project, we use the Sloan Digital Sky Survey (SDSS) “g” and “r” bands from Data Release 7.
 
+Before I begin analyzing galaxy data, I have to first retrieve it from the SDSS database. To do so, log into the SDSS database at https://casjobs.sdss.org/CasJobs/ and write the following two SQL queries:
+
+-- Query for Sample A (Early-type Galaxies)
+SELECT TOP 5000
+  gal.modelmag_g, gal.devmag_g, gal.expmag_g, gal.devrad_g, gal.exprad_g, gal.expab_g,
+  gal.extinction_g, gal.z, gal.modelmag_r, gal.devmag_r, gal.expmag_r, gal.devrad_r, gal.expab_r,
+  gal.extinction_r
+FROM Galaxy AS gal
+JOIN specObj AS sp
+ON gal.specObjID=sp.specObjID
+WHERE
+  gal.petroR90_r/gal.petroR50_r > 2.4
+  AND sp.eclass < 0
+  AND gal.fracdev_g = 1
+
+
+-- Query for Sample B (Late-type Galaxies)
+SELECT TOP 5000
+  gal.modelmag_g, gal.devmag_g, gal.expmag_g, gal.devrad_g, gal.exprad_g, gal.expab_g,
+  gal.extinction_g, gal.z, gal.modelmag_r, gal.devmag_r, gal.expmag_r, gal.devrad_r, gal.expab_r,
+  gal.extinction_r
+FROM Galaxy AS gal
+JOIN specObj AS sp
+ON gal.specObjID=sp.specObjID
+WHERE
+  gal.petroR90_r/gal.petroR50_r < 2.2
+  AND sp.eclass > 0.05
+  AND (gal.fracdev_g BETWEEN 0 and 0.3)
+
 After querying the SDSS database with SQL to retrieve galaxy parameters, I visually inspected the following samples of galaxy images using SDSS's SkyServer Explorer:
 
 <!--Sample A:
