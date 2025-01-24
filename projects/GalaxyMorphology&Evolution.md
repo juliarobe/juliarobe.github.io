@@ -22,9 +22,9 @@ Sample B:
 <img class="img-fluid" src="../img/sampleB_color_images.PNG">-->
 
 <b style="font-size: 24px;">Sample A:</b>
-<img class="img-fluid" src="../img/sampleA_color_images.PNG" width="300">
+<img class="img-fluid" src="../img/sampleA_color_images.PNG" width="500">
 <b style="font-size: 24px;">Sample B:</b>
-<img class="img-fluid" src="../img/sampleB_color_images.PNG" width="300">
+<img class="img-fluid" src="../img/sampleB_color_images.PNG" width="500">
 
 Sample A's galaxies appear redder in color, while Sample B's appear more blue. Sample A's galaxies also seem more dense with very little structure, while Sample B's are less dense and some appear to have more structure. This tells us that Sample A most likely consists of early-type galaxies such as elliptical and lenticular galaxies, while Sample B most likely contains later type galaxies like spiral galaxies. 
 
@@ -41,25 +41,32 @@ Next, I computed K-corrections, which account for the effects of redshift on gal
   width: 100%;
   height: auto;
 }
+
+.image-grid figcaption {
+  text-align: center; /* center the caption */
+  font-style: italic; /* italicize the caption */
+  font-size: 14px; /* reduce the font size */
+  margin-top: 5px; /* add some space between the image and caption */
+}
 </style>
 
 <div class="image-grid">
-  <div>
+  <figure>
     <img class="img-fluid" src="../img/Kcorr_fracdev_1_gband.PNG" alt="G-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) G-Band</figcaption>
-  </div>
-  <div>
+  </figure>
+  <figure>
     <img class="img-fluid" src="../img/Kcorr_fracdev_1_rband.PNG" alt="R-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) R-Band</figcaption>
-  </div>
-  <div>
+  </figure>
+  <figure>
     <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_gband.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) G-Band</figcaption>
-  </div>
-  <div>
+  </figure>
+  <figure>
     <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_rband.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) R-Band</figcaption>
-  </div>
+  </figure>
 </div>
 
 The above plots show K-corrections as a function of redshift for galaxies with different light profile characteristics (fracdev). The plots show the relationship between K-correction values (y-axis) and redshift (x-axis) for galaxies with fracdev = 1 and fracdev < 1 in the g and r bands.
