@@ -16,10 +16,15 @@ late-type (S) galaxies. For this project, we use the Sloan Digital Sky Survey (S
 
 After querying the SDSS database with SQL to retrieve galaxy parameters, I visually inspected the following samples of galaxy images using SDSS's SkyServer Explorer:
 
-Sample A:
+<!--Sample A:
 <img class="img-fluid" src="../img/sampleA_color_images.PNG">
 Sample B:
-<img class="img-fluid" src="../img/sampleB_color_images.PNG">
+<img class="img-fluid" src="../img/sampleB_color_images.PNG">-->
+
+<b style="font-size: 24px;">Sample A:</b>
+<img class="img-fluid" src="../img/sampleA_color_images.PNG" width="300">
+<b style="font-size: 24px;">Sample B:</b>
+<img class="img-fluid" src="../img/sampleB_color_images.PNG" width="300">
 
 Sample A's galaxies appear redder in color, while Sample B's appear more blue. Sample A's galaxies also seem more dense with very little structure, while Sample B's are less dense and some appear to have more structure. This tells us that Sample A most likely consists of early-type galaxies such as elliptical and lenticular galaxies, while Sample B most likely contains later type galaxies like spiral galaxies. 
 
