@@ -60,6 +60,111 @@ Sample A's galaxies appear redder in color, while Sample B's appear more blue. S
 
 Next, I computed K-corrections, which account for the effects of redshift on galaxy brightness, by analyzing flux data from the SDSS database and applying filter responses and reddening corrections to galaxy spectra. This involved interpolating filter data to estimate responses at specific wavelengths, allowing me to visualize and understand the results.
 
+Here is a sample of my code used to calculate the observed magnitudes for both the r-band and g-band, which is are values needed to calculate the K-correction. This calculation is also where I interpolated the filter data to estimate the filter response at the exact wavelength of the spectral data:
+
+```
+# Calculate observed magnitudes for r-band and g-band
+
+# Dictionaries to store observed magnitude values
+Mobs_r = {}
+Mobs_g = {}
+
+# Iterate through each galaxy's spectral data
+for key, data in filtered_spec.items():
+    # Extract wavelengths and fluxes from spectral data
+    wavlen_obs = data[:, 0]
+    flux = data[:, 1]
+
+    # Calculate differential wavelength for each galaxy
+    dlambda_r = np.gradient(wavlen_obs)
+    dlambda_g = np.gradient(wavlen_obs)
+
+    # Interpolate filter responses at galaxy's wavelengths
+    interp_resp_r = np.interp(wavlen_obs, r_wavlen, r_resp)
+    interp_resp_g = np.interp(wavlen_obs, g_wavlen, g_resp)
+
+    # Calculate observed magnitudes using interpolated responses
+    r_int = np.trapz(flux * interp_resp_r * (wavlen_obs ** 2) * dlambda_r, wavlen_obs)
+    r_mobs = -2.5 * np.log(r_int)
+    Mobs_r[key] = r_mobs
+
+    # Repeat for g-band
+    g_int = np.trapz(flux * interp_resp_g * (wavlen_obs ** 2) * dlambda_g, wavlen_obs)
+    g_mobs = -2.5 * np.log(g_int)
+    Mobs_g[key] = g_mobs
+```
+
+After doing a similar calculation for the magnitudes of the g-band and r-bands in the restframe, I'm finally ready to calculate the K-correction values:
+
+```
+# Create dictionaries to store the differences in magnitudes
+K_r = {}
+K_g = {}
+
+# Iterate through the galaxies in your dictionaries
+for key in Mobs_r:
+    if key in Mrest_r and key in Mobs_g and key in Mrest_g:
+        # Calculate the difference in magnitudes for each filter
+        K_r[key] = abs(Mobs_r[key] - Mrest_r[key])
+        K_g[key] = abs(Mobs_g[key] - Mrest_g[key])
+```
+
+Next, I compute the median K-correction in small redshift bins ($\Delta(z) = 0.02$), then I am finally ready to plot the K-correction versus the redshift values! Here is a sample of my code used to do just that:
+
+###Data Preparation:
+```
+# Setting bin edges
+bin_edges = [0.0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18, 0.20, 0.22, 0.24, 0.26, 0.28]
+
+z_values = []
+kr_values = []
+
+for key in fracdev_g:
+    cleaned_key = key.strip()
+    if cleaned_key in z_dict and cleaned_key in K_r:
+        z = z_dict[cleaned_key]
+        if fracdev_g[cleaned_key] == 1:
+            z_values.append(z)
+            kr_values.append(K_r[cleaned_key])
+```
+###Calculating median K-correction values:
+```
+bin_centers = []
+Kcorr_r_med1 = []
+
+for i in range(len(bin_edges) - 1):
+    bin_start = bin_edges[i]
+    bin_end = bin_edges[i + 1]
+
+    # Collect the K_r values within the current redshift bin
+    kr_values_inbin = [kr for z, kr in zip(z_values, kr_values) if bin_start <= z < bin_end]
+
+    if kr_values_inbin:
+        med_r = np.median(kr_values_inbin)
+        bin_centers.append((bin_start + bin_end) / 2)
+        Kcorr_r_med1.append(med_r)
+        K_med_r[(bin_start, bin_end)] = med_r
+```
+###Plotting the results:
+```
+# Plot the actual K_r values versus redshift
+plt.plot(z_values, kr_values, marker='o', linestyle='', color='blue', markersize=1, label='K')
+
+# Plot the median K_r values
+plt.plot(bin_centers, Kcorr_r_med1, marker='o', linestyle='-', color='red', markersize=2, label='Median $K_r$')
+
+# Set labels and legend
+plt.xlabel('Redshift (Z)')
+plt.ylabel('$K_r$')
+plt.ylim(0, 0.4)
+plt.title("Kcorr vs Z, fracdev_g = 1, r-band")
+plt.legend()
+plt.savefig("kcorr_r_fracdev1.png")
+plt.show()
+```
+
+##K-correction values versus redshift plots:
+
 <style>
 .image-grid {
   display: grid;
