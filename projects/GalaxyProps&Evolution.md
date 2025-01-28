@@ -81,17 +81,17 @@ print("Optimal Q:", optimal_Q)
 The three plots below show the observed galaxy data distributions (blue) versus the V-max corrected distributions (orange).
 
 <h2 style="text-align: center;">Absolute Magnitude Distribution: Observed vs V-max Corrected</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/abs_mag_dist_vmax.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/abs_mag_dist_vmax.png" width="500">
 
 For the absolute magnitude distribution, the V-max corrected distribution is more spread and shifted towards fainter, less luminous galaxies. Thus, we see that the original, uncorrected distribution was biased towards brighter galaxies. 
 
 <h2 style="text-align: center;">Physical Size Distribution: Observed vs V-max Corrected:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/size_dist_vmax.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/size_dist_vmax.png" width="500">
 
 For the physical size distribution, the V-max corrected distribution is shifted to the left towards smaller sizes, suggesting that the uncorrected distribution was biased towards larger galaxies. This makes sense since larger galaxies are easier to detect, especially at larger distances. 
 
 <h2 style="text-align: center;">Surface Brightness Distribution: Observed vs V-max Corrected:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/surf_brightness_dist_vmax.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/surf_brightness_dist_vmax.png" width="500">
 
 For the surface brightness distribution, the corrected distribution has a similar median value as before, suggesting that the correction did not significantly affect the typical surface brightness distribution of galaxies. The slightly larger spread in the corrected distribution seems due to the inclusion of more faint or low-surface-brightness galaxies.
 
@@ -159,19 +159,19 @@ else:
 ```
 ### Profile Fits:
 <h2 style="text-align: center;">Galaxy 3 Profiles:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/gal3_R_vs_mu.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/gal3_R_vs_mu.png" width="500">
 
 
 Although the best fit surface brightness profile is difficult to determine by eye, the least squares method tells me that the Sersic fit is the best fit.
 
 <h2 style="text-align: center;">Galaxy 10 Profiles:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/gal10_R_vs_mu.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/gal10_R_vs_mu.png" width="500">
 
 
 For this galaxy, the deVaucouleurs fit looks the closest to the observed data, although none of the profiles fit the data super well. Indeed, the least squares method tells me that the deVaucaoleurs fit is the best.
 
 <h2 style="text-align: center;">Galaxy 14 Profiles:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/gal14_R_vs_mu.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/gal14_R_vs_mu.png" width="500">
 
 
 For this galaxy, it seems like deVaucouleurs fit is the best fit, and the least squares method confirms this. 
@@ -198,19 +198,19 @@ z_bins_a = np.sort(np.unique(sampleA['z_bin'][~np.isnan(sampleA['z'])]))
 Finally, I am able to make the following plots:
 
 <h2 style="text-align: center;">Sample A Concentration Index versus Redshift:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/ci_vs_z_subplotsA.png" width="600">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/ci_vs_z_subplotsA.png" width="600">
 
 <h2 style="text-align: center;">Sample B Concentration Index versus Redshift:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/ci_vs_z_subplotsB.png" width="600">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/ci_vs_z_subplotsB.png" width="600">
 
 <h2 style="text-align: center;">Sample A Scatterplot of Concentration Index versus Redshift:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/ci_vs_z_single_scatterA.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/ci_vs_z_single_scatterA.png" width="500">
 
 <h2 style="text-align: center;">Sample B Scatterplot of Concentration Index versus Redshift:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/ci_vs_z_single_scatterB.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/ci_vs_z_single_scatterB.png" width="500">
 
 <h2 style="text-align: center;">Median Concentration Index versus Redshift:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/ci_vs_z_lineplotAandB.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/ci_vs_z_lineplotAandB.png" width="500">
 
 Sample A's galaxies clearly have higher concentration indices than Sample B's, indicating that Sample A's galaxies have more centrally concentrated light profiles, whereas Sample B's galaxies have more diffuse light profiles. 
 
@@ -221,9 +221,9 @@ Here, I compute the median radius in both the r-band ($$R_r $$) and the g-band (
 ### Plots:
 
 <h2 style="text-align: center;">Median Radius vs Evolution Corrected Abs Magnitudes:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/med_R_vs_evolcorr_Mr.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/med_R_vs_evolcorr_Mr.png" width="500">
 
 <h2 style="text-align: center;">Difference of Median Radius vs Evolution Corrected Abs Magnitude:</h2>
-<img class="img-fluid" src="../img/GalPropsEvol_Imgs/med_evolcorr_Mr.png" width="500">
+<img class="img-fluid" style="display: block; margin: 0 auto;" src="../img/GalPropsEvol_Imgs/med_evolcorr_Mr.png" width="500">
 
 The estimate for $$R_g $$ is slightly higher than that for $$R_r $$ at several points, indicating a systematic difference between the two bands. This discrepancy arises from the filter effect, where the observed flux in the g-band is affected by the redshift of the galaxies, causing the light to be shifted towards shorter wavelengths. To correct for this effect, a k-correction is necessary to convert the observed magnitudes to their respective rest-frame values. The k-correction involves calculating the flux in the rest-frame and observed-frame, taking into account the telescope's filter response. By applying this correction, we can obtain a more accurate estimate of the galaxy sizes, unbiased by the effects of redshift. This correction is particularly important when comparing galaxy properties across different redshifts or bands.
