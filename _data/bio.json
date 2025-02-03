@@ -23,11 +23,11 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "Python", "SQL" ]
+      "keywords": [ "Python (Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, Seaborn)", "SQL" ]
     },
     {
       "name": "Toolsets",
-      "keywords": [ "Jupyter", "GitHub", "Tableau (proficiency in progress)", "LaTEX", "Microsoft Suite", "Markdown" ]
+      "keywords": [ "Jupyter", "GitHub", "Linux Command Line", "Vim", "Tableau (proficiency in progress)", "LaTEX", "Markdown", "Microsoft Suite" ]
     }
   ],
   "education": [
@@ -50,39 +50,58 @@
       ]
     }
   ],
-  "work": [
+    "work": [
+  {
+    "company": "University of Pennsylvania",
+    "position": "Researcher",
+    "website": "",
+    "startDate": "2023-06-15",
+    "endDate": "2024-12-15",
+    "projects": [
+      {
+        "title": "Galaxy Mergers and Early-Type Galaxies",
+        "summary": "Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
+        "highlights": [
+          "Applied data processing techniques to 5.5 GB of spectroscopic data from 300+ galaxies, including spectral stacking, normalization and smoothing.",
+          "Employed statistical modeling techniques, including grid-based searches and chi-squared minimization, to infer stellar population properties.",
+          "Visualized and interpreted stellar population data using Python scripts with matplotlib and seaborn, yielding key insights that informed scientific conclusions.",
+          "Ensured data accuracy and precision by utilizing bootstrap resampling techniques to quantify uncertainty and validate results.",
+          "Reproduced and refined a previous study, identifying and correcting errors in the original findings due to sample contamination."
+        ]
+      },
+      {
+        "title": "Galaxy Morphology, Properties, and Evolution",
+        "summary": "Investigated galaxy morphology, formation, properties, and evolution through data analysis and visualization.",
+        "highlights": [
+          "Analyzed data from 10,000 galaxies from the SDSS database, applying bias correction and normalization to derive accurate properties for two types of galaxies.",
+          "Developed software in Python to extract, transform, and load large datasets, applying quality filters from the SDSS database to ensure data accuracy.",
+          "Improved data accuracy by ~30-40% through physical bias correction using velocity-based techniques, resulting in more accurate galaxy property distributions.",
+          "Modeled radial surface brightness profiles using well established mathematical models and non-linear least squares fitting techniques.",
+          "Utilized matplotlib and seaborn to develop clear and concise visualizations of galaxy distributions and properties.",
+          "Uncovered key trends and patterns in galaxy property distributions by comparing observed and corrected data, informing insights into galaxy evolution.",
+          "Created concise and informative reports to present key analysis results, data trends, and insights."
+        ]
+      }
+    ]
+  },
     {
       "company": "University of Pennsylvania",
-      "position": "Graduate Researcher",
-      "website": "",
-      "startDate": "2023-06-15",
-      "endDate": "2024-12-15",
-      "summary": "Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
-      "highlights": [
-        "Processed and analyzed complex spectroscopic data from 300+ galaxies, demonstrating ability to handle large datasets.",
-        "Wrote Python scripts to analyze, visualize, and interpret the data, extracting findings to inform scientific conclusions.",
-        "Utilized bootstrap resampling and cross-validation techniques to ensure model robustness and accuracy in predictions.",
-        "Applied regression analysis and modeling techniques to understand complex relationships in large datasets.",
-        "Employed data correction methods to ensure data quality and accuracy in large datasets.",
-        "Developed data visualizations with Matplotlib and Seaborn to communicate insights and trends.",
-        "Uncovered key trends and correlations in large astronomical datasets, informing conclusions on galaxy evolution."
-      ]
-    },
-    {
-      "company": "University of Pennsylvania",
-      "position": "Graduate Researcher",
+      "position": "Researcher",
       "website": "https://web.sas.upenn.edu/devlinlab/",
       "startDate": "2021-07-05",
       "endDate": "2023-06-15",
       "summary": "Validated the Large Aperture Telescope Receiver for Simons Observatory and deployed the receiver to Chile.",
       "highlights": [
-        "Validated RF chain performance by executing a test protocol using a Vector Network Analyzer, collecting and analyzing output signals, and visualizing results.",
-        "Designed and built an optical chopper, generating a consistent, optically “chopped” signal to test for cross-polarization effects, and analyzed resulting data to forecast potential polarization-related anomalies.",
-        "Coordinated data analysis with multiple collaborators, including fellow graduate researchers, senior scientists, and stakeholders with non-technical backgrounds across three institutions, to validate findings and draw meaningful conclusions.",
-        "Developed and tested existing hardware solutions to improve research capabilities.",
-        "Obtained hands-on experience with sub-kelvin cryogenic, electrical, mechanical, and RF engineering.",
-        "Operated and maintained complex cryogenics and vacuum systems, ensuring seamless research operations.",
-        "Adapted to changing project requirements and tight deadlines, prioritizing tasks and managing time effectively to ensure timely deployment."
+        "Validated RF chain performance by executing an established test protocol using a Vector Network Analyzer, collecting and analyzing output signals using scikit-rf, and visualizing results with matplotlib.",
+        "Utilized optical test equipment to test for cross-polarization effects in our telescopes detectors and analyzed the resulting data to forecast potential polarization-related anomalies.",
+        "Coordinated data analysis with multiple collaborators, including fellow graduate researchers, senior scientists, and non-technical stakeholders across three institutions, to validate findings and draw meaningful conclusions.",
+        "Designed and built a custom low-pass filter box to facilitate vibrational analysis of the telescope receiver, implementing precise wavelength filtering to meet measurement requirements.",
+        "Ensured reliable operation of complex cryogenic and vacuum systems, optimizing research productivity and efficiency.",
+        "Utilized precision soldering techniques to assemble and repair complex electronic systems, ensuring high-quality connections and reliable performance.",
+        "Achieved certification in overhead hoist and crane operating, enhancing team safety and efficiency.",
+        "Collaborated with multiple site teams, including electricians, engineers, and construction workers, navigating diverse expertise and priorities to ensure successful instrument deployment.",
+        "Adapted to changing project requirements and tight deadlines, prioritizing tasks and managing time effectively to ensure timely deployment.",
+        "Obtained hands-on experience with sub-kelvin cryogenic, electrical, mechanical, and RF engineering, broadening my knowledge in these areas."
       ]
     },
     {
