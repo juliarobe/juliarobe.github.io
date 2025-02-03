@@ -57,7 +57,7 @@
   "website": "",
   "startDate": "2023-06-15",
   "endDate": "2024-12-15",
-  "summary": "Galaxy Mergers and Early-Type Galaxies:Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
+  "summary": "Galaxy Mergers and Early-Type Galaxies: Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
   "highlights": [
         "Applied data processing techniques to 5.5 GB of spectroscopic data from 300+ galaxies, including spectral stacking, normalization and smoothing.",
         "Employed statistical modeling techniques, including grid-based searches and chi-squared minimization, to infer stellar population properties.",
