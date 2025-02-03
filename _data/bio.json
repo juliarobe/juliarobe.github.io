@@ -57,12 +57,8 @@
   "website": "",
   "startDate": "2023-06-15",
   "endDate": "2024-12-15",
-  "summary": "Conducted research in galaxy formation and evolution, analyzing large datasets and developing software tools.",
+  "summary": "Galaxy Mergers and Early-Type Galaxies:Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
   "highlights": [
-    {
-      "title": "Galaxy Mergers and Early-Type Galaxies",
-      "summary": "Analyzed spectroscopic data from the Mapping Nearby Galaxies at APO (MaNGA) to investigate galaxy properties and better understand their formation history and evolution.",
-      "highlights": [
         "Applied data processing techniques to 5.5 GB of spectroscopic data from 300+ galaxies, including spectral stacking, normalization and smoothing.",
         "Employed statistical modeling techniques, including grid-based searches and chi-squared minimization, to infer stellar population properties.",
         "Visualized and interpreted stellar population data using Python scripts with matplotlib and seaborn, yielding key insights that informed scientific conclusions.",
@@ -70,10 +66,14 @@
         "Reproduced and refined a previous study, identifying and correcting errors in the original findings due to sample contamination."
       ]
     },
-    {
-      "title": "Galaxy Morphology, Properties, and Evolution",
-      "summary": "Investigated galaxy morphology, formation, properties, and evolution through data analysis and visualization.",
-      "highlights": [
+      {
+  "company": "University of Pennsylvania",
+  "position": "Researcher",
+  "website": "",
+  "startDate": "2023-06-15",
+  "endDate": "2023-12-15",
+  "summary": "Galaxy Morphology, Properties, and Evolution: Investigated galaxy morphology, formation, properties, and evolution through data analysis and visualization.",
+  "highlights": [
         "Analyzed data from 10,000 galaxies from the SDSS database, applying bias correction and normalization to derive accurate properties for two types of galaxies.",
         "Developed software in Python to extract, transform, and load large datasets, applying quality filters from the SDSS database to ensure data accuracy.",
         "Improved data accuracy by ~30-40% through physical bias correction using velocity-based techniques, resulting in more accurate galaxy property distributions.",
@@ -82,8 +82,7 @@
         "Uncovered key trends and patterns in galaxy property distributions by comparing observed and corrected data, informing insights into galaxy evolution.",
         "Created concise and informative reports to present key analysis results, data trends, and insights."
       ]
-    }
-  ]
+    },
 },
     {
       "company": "University of Pennsylvania",
