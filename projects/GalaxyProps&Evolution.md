@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: /img/gal14_R_vs_mu.png
+image: img/gal14_R_vs_mu.png
 
 title: "Galaxy Properties and Evolution: A Multi-Faceted Analysis"
 date: 2023
