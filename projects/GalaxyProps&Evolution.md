@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: /main/img/GalPropsEvol_Imgs/gal3_R_vs_mu.png
+image: /img/GalPropsEvol_Imgs/gal3_R_vs_mu.png
 title: "Galaxy Properties and Evolution: A Multi-Faceted Analysis"
 date: 2023
 published: true
