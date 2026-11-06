@@ -189,19 +189,19 @@ plt.show()
 
 <div class="image-grid">
   <figure>
-    <img class="img-fluid" src="../img/kcorr_fracdev_1_gband_2026.PNG" alt="G-Band De Vaucouleurs Dominated">
+    <img class="img-fluid" src="../img/kcorr_fracdev1_gband_2026.PNG" alt="G-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) G-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/kcorr_fracdev_1_rband_2026.PNG" alt="R-Band De Vaucouleurs Dominated">
+    <img class="img-fluid" src="../img/kcorr_fracdev1_rband_2026.PNG" alt="R-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) R-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/kcorr_fracdev_LT1_gband_2026.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <img class="img-fluid" src="../img/kcorr_fracdevLT1_gband_2026.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) G-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/kcorr_fracdev_LT1_rband_2026.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <img class="img-fluid" src="../img/kcorr_fracdevLT1_rband_2026.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) R-Band</figcaption>
   </figure>
 </div>
@@ -269,16 +269,16 @@ sampleA_z["sb_g"] = sampleA_z["devmag_g"] - sampleA_z["k_g"] + 5*np.log10(sample
     <img class="img-fluid" src="../img/abs_mag_sampleB_2026.PNG" alt="Sample B Absolute Magnitude Distribution">
   </div>
   <div>
-    <img class="img-fluid" src="../img/size_dist_sampleA_2026.PNG" alt="Sample A Physical Size Distribution">
+    <img class="img-fluid" src="../img/phys_size_sampleA_2026.PNG" alt="Sample A Physical Size Distribution">
   </div>
   <div>
-    <img class="img-fluid" src="../img/size_dist_sampleB_2026.PNG" alt="Sample B Physical Size Distribution">
+    <img class="img-fluid" src="../img/phys_size_sampleB_2026.PNG" alt="Sample B Physical Size Distribution">
   </div>
   <div>
-    <img class="img-fluid" src="../img/surface_brightness_sampA_2026.PNG" alt="Sample A Surface Brightness Distribution">
+    <img class="img-fluid" src="../img/sb_sampleA_2026.PNG" alt="Sample A Surface Brightness Distribution">
   </div>
   <div>
-    <img class="img-fluid" src="../img/surface_brightness_sampB_2026.PNG" alt="Sample B Surface Brightness Distribution">
+    <img class="img-fluid" src="../img/sb_sampleB_2026.PNG" alt="Sample B Surface Brightness Distribution">
   </div>
 </div>
 
