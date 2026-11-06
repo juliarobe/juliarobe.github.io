@@ -189,19 +189,19 @@ plt.show()
 
 <div class="image-grid">
   <figure>
-    <img class="img-fluid" src="../img/Kcorr_fracdev_1_gband_2026.PNG" alt="G-Band De Vaucouleurs Dominated">
+    <img class="img-fluid" src="../img/kcorr_fracdev_1_gband_2026.PNG" alt="G-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) G-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/Kcorr_fracdev_1_rband_2026.PNG" alt="R-Band De Vaucouleurs Dominated">
+    <img class="img-fluid" src="../img/kcorr_fracdev_1_rband_2026.PNG" alt="R-Band De Vaucouleurs Dominated">
     <figcaption>De Vaucouleurs Dominated (fracdev = 1) R-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_gband_2026.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <img class="img-fluid" src="../img/kcorr_fracdev_LT1_gband_2026.PNG" alt="G-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) G-Band</figcaption>
   </figure>
   <figure>
-    <img class="img-fluid" src="../img/Kcorr_fracdev_LT1_rband_2026.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
+    <img class="img-fluid" src="../img/kcorr_fracdev_LT1_rband_2026.PNG" alt="R-Band Mixed De Vaucouleurs and Exponential Light Distribution">
     <figcaption>Mixed De Vaucouleurs and Exponential Light Distribution (fracdev < 1) R-Band</figcaption>
   </figure>
 </div>
