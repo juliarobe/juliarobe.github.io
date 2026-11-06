@@ -86,12 +86,12 @@ for key, data in filtered_spec.items():
 
     # Calculate observed magnitudes using interpolated responses
     r_int = np.trapz(flux * interp_resp_r * (wavlen_obs ** 2) * dlambda_r, wavlen_obs)
-    r_mobs = -2.5 * np.log(r_int)
+    r_mobs = -2.5 * np.log10(r_int)
     Mobs_r[key] = r_mobs
 
     # Repeat for g-band
     g_int = np.trapz(flux * interp_resp_g * (wavlen_obs ** 2) * dlambda_g, wavlen_obs)
-    g_mobs = -2.5 * np.log(g_int)
+    g_mobs = -2.5 * np.log10(g_int)
     Mobs_g[key] = g_mobs
 ```
 
