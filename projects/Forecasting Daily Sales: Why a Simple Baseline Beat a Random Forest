@@ -1,0 +1,50 @@
+---
+layout: project
+type: project
+image: img/cremstar_poisson_check.png
+title: "Can Daily Sales Be Predicted? A Baseline Test on Real Business Data"
+date: 2025
+published: true
+labels:
+  - Python
+  - Pandas
+  - scikit-learn
+  - Statistical Modeling
+  - Time Series
+summary: "Tested whether calendar features can predict daily sales for a small regional services business. Found that daily counts behave like random (Poisson) arrivals and that a Random Forest does not beat a simple average."
+---
+A regional services business wanted a way to forecast demand. I started with about three years of sales records (roughly 1,300 sales across two states, 2022 to 2025) and tested whether calendar features could predict how many sales happen on a given day.
+
+### The first pass
+
+My first models looked promising. One reported an R² of 0.78. But, that number was calculated on the same data the model was trained on. On held-out days the same model scored below zero. Gaps like that between training and test scores are clear signs of overfitting, so I corrected for it on my second pass.
+
+### The cleanup
+
+The first daily table only contained days with at least one sale. That made the average look like 1.5 sales per day. Filling in the days with zero sales (about 42% of days in State A and 69% in State B) brings the real averages down to roughly 0.9 and 0.4 sales per day. I also removed one 37-sale row dated months after the rest of the data ended, which looked like a data error and had single-handedly inflated the variance.
+
+### Test 1: Do daily counts look random?
+
+If sales arrive independently, daily counts should follow a Poisson distribution, where the variance equals the mean. The variance to mean ratio is 1.05 in State A and 1.10 in State B, and the observed counts sit almost exactly on the Poisson curve.
+
+<img class="img-fluid" src="../img/01_poisson_check.png">
+
+### Test 2: Does a model beat a simple average?
+
+I trained on everything before July 2024 and tested on the later days, so the test is a real forecast and not a shuffled split. Error is mean absolute error in sales per day.
+
+<img class="img-fluid" src="../img/02_model_vs_baseline.png">
+
+A plain state average (R² 0.12) beats the Random Forest (R² 0.01). Adding the day of the week to the average helped slightly (R² 0.14). Almost all the usable signal is the difference between the two states.
+
+### Which calendar effects are real?
+
+The weekday effect is statistically real (p < 0.001): weekends run lower than weekdays. But it adds very little predictive power. A month effect is not significant (p = 0.09), so I would not plan staffing around a "peak month."
+
+### Takeaways
+
+With counts this close to Poisson, there is little for any model to find, and a large share of day to day variation is chance. The practical forecast is a rate per state, with a slightly lower weekend rate. The more useful work for the business is likely in what sits behind the counts (marketing spend, lead sources), not in a day by day calendar model.
+
+Limits: I assumed days with no record had no sales. If the data feed had gaps, some "zero" days are missing data.
+
+Code: Python, pandas, scikit-learn, SciPy, Matplotlib.
