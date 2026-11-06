@@ -1,9 +1,9 @@
 {
   "basics": {
     "name": "Julia Robe, MSc",
-    "label": "Quantitative Analyst",
+    "label": "Physics MS | Data Analysis and Modeling",
     "picture": "https://github.com/juliarobe.png",
-    "email": "jerobe@sas.upenn.edu",
+    "email": "julia.e.robe@gmail.com",
     "phone": "",
     "website": "https://juliarobe.github.io",
     "summary": "Data analyst with a physics MS. Python, SQL, and statistical modeling, applied to telescope data and institutional portfolios.",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Toolsets",
-      "keywords": [ "Jupyter", "GitHub", "Linux Command Line", "Vim", "Tableau (proficiency in progress)", "LaTEX", "Markdown", "Microsoft Suite" ]
+      "keywords": [ "Jupyter", "GitHub", "Linux Command Line", "Vim", "LaTEX", "Markdown", "Microsoft Suite" ]
     }
   ],
   "education": [
