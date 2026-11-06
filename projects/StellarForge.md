@@ -20,7 +20,7 @@ I used different types of Star Formation Rates (SFR) and different metallicities
   - Exponential declining with tau=1, 2 and 3 Gyrs
   - Single burst of length tau=2 Gyrs
 
-The BC03 models I used output tables of data (such as color and stellar mass) as a function of age. For each SFR + metallicity combination, I found the predicted age at which the model's evolution corrected g-r color agrees with the actual age of the galaxy.
+The BC03 models I used output tables of data (such as color and stellar mass) as a function of age. For each SFR + metallicity combination, I found the age at which the model’s g-r color best matches the galaxy’s evolution corrected g-r color.
 
 The age-metallicity degeneracy suggests that, for a given observed property (e.g., color), there could be multiple combinations of age and metallicity that result in a similar observed value. We see there is indeed an age-metallicity degeneracy since, for a given g-r color, various SFR models + metallicity combinations give varying ages.
 
@@ -31,9 +31,9 @@ In the table below, which is just a snippit of a larger table that contains the 
 
 As we can see, based on the given g-r color value, different SFR model + metalicity combinations can give very different predicted ages.
 
-Next, I use the evolution corrected g-r color values for 50 galaxies to find which model best fits that color. To do this, I loaded the model data, calculated the predicted colors, found the best-fit model for each galaxy, and stored the results in a data frame. 
+Next, I use the evolution corrected g-r color values for 50 galaxies to see which model and metallicity combination reproduces each galaxy’s known age. To do this, I loaded the model data, calculated the predicted colors, found the combination whose predicted age is closest to each galaxy’s true age, and stored the results in a data frame. Because the true age is used in this selection, it is a consistency check on the models, not an independent fit.
 
-### Finding the best-fit model for each galaxy:
+### Finding the closest-match model for each galaxy:
 ```
 # Define models and metallicities
 model = [r"...\ssp\hr_chabrier_ssp_", ...]  # list of 5 model paths
@@ -74,7 +74,7 @@ for z in range(len(gals50["z"])):
     best_modelDF.loc[z] = [z, gal_age, best_age, best_model, best_metallicity]
 ```
 
-Next, I can plot the best predicated age versus the true age of the galaxy sample!
+Next, I can plot the closest-match predicted age versus the true age of the galaxy sample!
 
 ### Best Predicted Age vs. True Age plotting code:
 ```
@@ -102,7 +102,8 @@ plt.show()
 <b style="font-size: 24px;">Best Age vs. True Age:</b>
 <img class="img-fluid" src="../img/StellarForgeImages/trueage_vs_bestage.png" width="500">
 
-We see that most of the galaxies are best described by one of two SFR's: the younger galaxies are modeled best by an Exponential declining SFR with a timescale τ = 1Gyr, while the older galaxies seem to better modeled by the Single Stellar Population (instantaneous burst) SFR. This could indicate a shift in galaxy evolution, where galaxies transition from a period of intense star formation to a more quiescent phase.
+
+Most of the galaxies are matched most closely by one of two SFRs: the younger galaxies by an exponentially declining SFR with a timescale τ = 1 Gyr, and the older galaxies by the Single Stellar Population (instantaneous burst) SFR. Because the model was selected using the true age, this pattern should be read cautiously. It may hint at a shift from intense star formation to a more quiescent phase, but it is not a test of that idea.
 
 Next, for each SFR, I estimated the K-correction in the r and g band for each of the same 50 galaxies using the BC03 models. The BC03 models return the K-correction as a function of redshift and age.
 
