@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/cremstar_poisson_check.png
-title: "Can Daily Sales Be Predicted? A Baseline Test on Real Business Data"
+title: "Forecasting Daily Sales: Why a Simple Baseline Beat a Random Forest"
 date: 2025
 published: true
 labels:
@@ -11,7 +11,8 @@ labels:
   - scikit-learn
   - Statistical Modeling
   - Time Series
-summary: "Tested whether calendar features can predict daily sales for a small regional services business. Found that daily counts behave like random (Poisson) arrivals and that a Random Forest does not beat a simple average."
+summary: "A small regional service business wanted to know whether their daily sales could be forecast, and whether outside data could be used to predict day to day demand. I built several forecasting models, then tested them against a simple baseline on later days the models hadn’t seen. Checking the daily counts showed they behave like random (Poisson) arrivals, and a Random Forest did not beat a simple average."
+
 ---
 A regional services business wanted a way to forecast demand. I started with about three years of sales records (roughly 1,300 sales across two states, 2022 to 2025) and tested whether calendar features could predict how many sales happen on a given day.
 
