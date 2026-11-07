@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/01_poisson_check.png
+image: img/daily_sales_card.png
 title: "Forecasting Daily Sales: Why a Simple Baseline Beat a Random Forest"
 date: 2025
 published: true
