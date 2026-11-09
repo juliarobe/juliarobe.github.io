@@ -22,7 +22,7 @@ My first models looked promising. One reported an R² of 0.78. But, that number 
 
 ### The cleanup
 
-The first daily table only contained days with at least one sale. That made the average look like 1.5 sales per day. Filling in the days with zero sales (about 42% of days in State A and 69% in State B) brings the real averages down to roughly 0.9 and 0.4 sales per day. I also removed one 37-sale row dated months after the rest of the data ended, which looked like a data error and had single-handedly inflated the variance.
+The first daily table only contained days with at least one sale. That made the average look like 1.5 sales per day. Filling in the days with zero sales (about 42% of days in New Jersey and 69% in Pennsylvania) brings the real averages down to roughly 0.9 and 0.4 sales per day. I also removed any day with 20 or more sales. There was only one, a 37-sale row dated months after the rest of the data ended, which looked like a data error and had single-handedly inflated the variance.
 
 ### Filling in the zero sales days:
 ```python
@@ -41,7 +41,7 @@ f["month"], f["dow"], f["is_nj"] = f.date.dt.month, f.date.dt.dayofweek, (f.stat
 
 ### Test 1: Do daily counts look random?
 
-If sales arrive independently, daily counts should follow a Poisson distribution, where the variance equals the mean. The variance to mean ratio is 1.05 in State A and 1.10 in State B, and the observed counts sit almost exactly on the Poisson curve.
+If sales arrive independently, daily counts should follow a Poisson distribution, where the variance equals the mean. The variance to mean ratio is 1.05 in New Jersey and 1.10 in Pennsylvania, and the observed counts sit almost exactly on the Poisson curve.
 
 ### Comparing observed counts to a Poisson distribution:
 ```python
@@ -53,7 +53,7 @@ obs = np.array([(g == k).sum() for k in ks]); exp = stats.poisson.pmf(ks, m) * l
 ax.set_title(f"{s}: variance/mean = {g.var()/m:.2f}", color=INK, fontsize=11, loc="left")
 ```
 
-<img class="img-fluid" src="../img/01_poisson_check.png">
+<img class="img-fluid" src="../img/01_poisson_check.png" alt="Observed daily sales counts compared with a Poisson curve for each state">
 
 ### Test 2: Does a model beat a simple average?
 
@@ -72,7 +72,7 @@ add("Random Forest", RandomForestRegressor(n_estimators=100, random_state=42).fi
 r = pd.DataFrame(res, columns=["model", "MAE", "R2"]); print(r.round(3).to_string(index=False))
 ```
 
-<img class="img-fluid" src="../img/02_model_vs_baseline.png">
+<img class="img-fluid" src="../img/02_model_vs_baseline.png" alt="Error of four forecasting models on held out later days">
 
 A plain state average (R² 0.12) beats the Random Forest (R² 0.01). Adding the day of the week to the average helped slightly (R² 0.14). Almost all the usable signal is the difference between the two states.
 
@@ -103,7 +103,7 @@ Limits: I assumed days with no record had no sales. If the data feed had gaps, s
 The snippets above are the core steps. Here is the complete script, including the code that makes both charts. It reads a small table of dates, states, and daily sales counts.
 
 ```python
-"""Cremstar daily sales: is demand predictable from calendar features?
+"""Daily sales: is demand predictable from calendar features?
 Input: daily_clean.csv (columns: date, state, daily_gigs). No customer data needed.
 Run: python crem_analysis.py daily_clean.csv
 """
